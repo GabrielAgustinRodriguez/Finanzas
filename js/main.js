@@ -3,9 +3,9 @@ function plazoFijo(){
     let capitalInicial = parseInt(prompt("Favor de iniciar el capital inicial a invertir"));
     let interes = parseInt(prompt("Favor de indicar el interés (TNA) del plazo fijo. Nota: para tranquilidad mental del programador de momento solo se calcula la TNA y no la TEA."));
     let tiempo = parseInt(prompt("Favor de ingresar los días a invertir. Tener presente que el plazo solo generará interés cada 30 días"));
-    console.log(capitalInicial);
-    console.log(interes);
-    console.log(tiempo);
+    console.log("Capital inicial ingresado: " + capitalInicial);
+    console.log("Interes ingresado: " + interes);
+    console.log("Días ingresados: " + tiempo);
     let capitalFinal = calcularPlazoFijo(capitalInicial,interes,tiempo);
     window.alert("Usted ha invertido $" + capitalInicial + ". Dada una TNA de " + interes + "% durante " + tiempo + " dias, obtendrá un capital de $" + capitalFinal);
     usuario = false;
@@ -13,11 +13,11 @@ function plazoFijo(){
 
 function calcularPlazoFijo(capitalInicial, interes, dias){
     let tiempo = Math.trunc(dias/30);
-    console.log(tiempo)
+    console.log("Plazos concretados: " + tiempo)
     let interesCalculado = interes/12*tiempo;
-    console.log("interes que calculas" + interesCalculado)
+    console.log("interes total que calculas: " + interesCalculado)
     let capitalFinal = parseInt(capitalInicial + (capitalInicial * (interesCalculado/100)));
-    console.log(capitalFinal);
+    console.log("El capital final obtenido: " + capitalFinal);
     return capitalFinal;
 }
 
@@ -58,7 +58,7 @@ function simuladorPrestamo(){
     let tiempo = parseInt(prompt("Favor de ingresar la cantidad de meses a pagar")); 
     let cuota = prestamo(capitalSolicitado, interes, tiempo);
 
-    console.log("Si pedís $" + capitalSolicitado + " bajo un interés del %" + interes + " durante " + tiempo + " meses, vas a pagar $" + cuota + " por mes.")
+    windows.alert("Si pedís $" + capitalSolicitado + " bajo un interés del %" + interes + " durante " + tiempo + " meses, vas a pagar $" + cuota + " por mes.");
 }
 
 function prestamo(capital, interes, tiempo){
@@ -92,3 +92,37 @@ while (usuario){
 
 }
     
+// Si bien todavía no tiene aplicación en la web, dejo la parte de objetos construido utilizando como ejemplo las monedas y sus conversiones
+
+let monedas = [];
+
+//Contructor de monedas
+
+function Moneda(nombre, precio) {
+    this.nombre = nombre;
+    this.precio = precio;
+  }
+
+
+function agregarMoneda(moneda){
+    monedas.push(moneda);
+}
+
+let dolar = new Moneda  ("dolar", 400);
+agregarMoneda(dolar);
+let euro = new Moneda  ("euro", 225);
+agregarMoneda(euro);
+let real = new Moneda  ("real", 0.024);
+agregarMoneda(real);
+let uru = new Moneda  ("pesoU", 0.19);
+agregarMoneda(uru);
+
+//Busqueda de una moneda
+
+function buscarMoneda(nombre){
+    for (var i=0; i<monedas.length;i++){
+        if(nombre == monedas[i].nombre){
+            return monedas[i];
+        }
+    }
+}
