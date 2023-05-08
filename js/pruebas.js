@@ -1,31 +1,18 @@
 
+//CONVERSIONES
+/*
 let pesosInput = document.getElementById("pesos")
 
 let moneda = document.getElementById("moneda")
 
-let boton = document.getElementById("btnprincipal")
+let botonConversiones = document.getElementById("btnconversiones")
 
-boton.addEventListener("click", respuestaClick)
+botonConversiones.addEventListener("click", respuestaConversionesClick)
 
-/*function respuestaClick(){
-    window.alert("$" + pesosInput.value + " a dólares son $" + parseInt(conversiones(pesosInput.value)) + " " + moneda.value + "s")
-}*/
 
-function respuestaClick(){
-    console.log("Entro chamigo")
+function respuestaConversionesClick(){
     Swal.fire("$" + pesosInput.value + " a dólares son $" + parseInt(conversiones(pesosInput.value)) + " " + moneda.value + "s")
 }
-
-
-/*function respuestaClick(){
-    Swal.fire(
-        "$" + pesosInput.value + " a dólares son ",
-        "$" + parseInt(conversiones(pesosInput.value)) + " " + moneda.value + "s"
-      )
-}*/
-
-
-
 
 
 function conversiones(dinero){
@@ -52,8 +39,34 @@ function conversiones(dinero){
     return conversionFinal;
 }
 
+*/
+//PLAZO FIJO
+
+let capitalInput = document.getElementById("capitalP")
+
+let interesInput = document.getElementById("interesP")
+
+let tiempoInput = document.getElementById("tiempoP")
+
+let botonPlazo = document.getElementById("btnplazo")
+
+botonPlazo.addEventListener("click", respuestaPlazoClick)
+
+function respuestaPlazoClick(){
+    Swal.fire("Si depositás $" + capitalInput.value + " durante " + tiempoInput.value + " meses, recibís un total de $" + calcularPlazoFijo(capitalInput.value, interesInput.value, tiempoInput.value));
+    showConfirmButton: true 
+}
 
 
+function calcularPlazoFijo(capitalInicial, interes, dias){
+    let tiempo = Math.trunc(dias/30);
+    console.log("Plazos concretados: " + tiempo)
+    let interesCalculado = interes/12*tiempo;
+    console.log("interes total que calculas: " + interesCalculado)
+    let capitalFinal = parseInt(capitalInicial + (capitalInicial * (interesCalculado/100)));
+    console.log("El capital final obtenido: " + capitalFinal);
+    return capitalFinal;
+}
 
 
 // Por cambios en la implementación de la web lo siguiente ha quedado en desuso, lo dejo para que puedan evaluar la creacion de constructores y manejo de arreglos
