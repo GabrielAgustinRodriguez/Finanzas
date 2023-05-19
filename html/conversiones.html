@@ -54,23 +54,26 @@
     <main>
       
       <!--CUERPO-->
-      <form>
-        <label for="country">Seleccione la moneda a utilizar</label>
-          <select id="moneda" name="moneda">
-            <option value="dolar">Dolar</option>
-            <option value="euro">Euro</option>
-            <option value="real">Real</option>
-            <option value="puruguayo">Peso uruguayo</option>
-          </select>
+      <section id="conversion">
+        <form>
+          <label for="country">Seleccione la moneda a utilizar</label>
+            <select id="moneda" name="moneda">
+              <option value="dolar">Dolar</option>
+              <option value="euro">Euro</option>
+              <option value="real">Real</option>
+              <option value="puruguayo">Peso uruguayo</option>
+            </select>
+        
+          <label for="pesos">Ingrese la cantidad de pesos que desea cambiar</label>
+          <input type="text" name="pesos" id = "pesos" placeholder="Ingrese la cantidad" required>
+  
       
-        <label for="pesos">Ingrese la cantidad de pesos que desea cambiar</label>
-        <input type="text" name="pesos" id = "pesos" placeholder="Ingrese la cantidad" required>
+          <input type = "button" class="btnconversiones" id = "btnconversiones" value = "Enviar"></button>
+  
+        </form>
 
-    
-
-        <input type="submit" id = "btnconversiones" value="Enviar">
-
-      </form>
+      </section>
+      
     </main>
 
 
@@ -107,7 +110,7 @@
     </script>
     <!--Enlace JS-->
     <!--script src="./js/main.js"></script>-->
-    <script src="../js/pruebas.js"></script>
+    <script src="../js/conversiones.js"></script>
 </body>
 
 
