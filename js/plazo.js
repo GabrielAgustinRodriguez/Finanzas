@@ -12,11 +12,6 @@ botonPlazo.addEventListener("click", respuestaPlazoClick)
 
 
 function respuestaPlazoClick(){
-    console.log(capitalInput.value);
-    console.log(interesInput.value);
-    console.log(tiempoInput.value);
-
-    console.log("Entro al plazo")
     Swal.fire({
         title: "Plazo Fijo",
         text: "Si depositás $" + capitalInput.value + " durante " + tiempoInput.value + " meses, recibís un total de $" + calcularPlazoFijo(capitalInput.value, interesInput.value, tiempoInput.value),

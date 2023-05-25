@@ -55,7 +55,7 @@ form {
   }
 
   .btnconversiones{
-    background-color: #4CAF50; /* Color de fondo */
+    background-color: #e9ec2f; /* Color de fondo */
     border: none; /* Sin borde */
     color: white; /* Color del texto */
     padding: 10px 20px; /* Espaciado interno */
@@ -87,3 +87,45 @@ form {
   .btnplazo:hover {
     background-color: #45a049; /* Color de fondo al pasar el mouse */
   }
+
+  .btnprestamo{
+    background-color: #880adb; /* Color de fondo */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin decoración de texto */
+    display: inline-block; /* Mostrar como elemento en línea */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor al pasar el mouse */
+    border-radius: 4px; /* Bordes redondeados */
+  }
+  .btnprestamo:hover {
+    background-color: #45a049; /* Color de fondo al pasar el mouse */
+  }
+
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  footer {
+    flex-shrink: 0;
+  }
+  

@@ -19,93 +19,98 @@
 </head>
 
 <body>
+
     <header>
       
-       <!--NAV-->
-       <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html">Finanzas G&R</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="./conversiones.html">Conversiones</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="./prestamos.html">Simulador Préstamos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="./plazo.html">Calculadora Plazo Fijo</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="./glosario.html">Glosario</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+      <!--NAV-->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+       <div class="container-fluid">
+         <a class="navbar-brand" href="../index.html">Finanzas G&R</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+           <ul class="navbar-nav">
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" href="./conversiones.html">Conversiones</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" href="./prestamos.html">Simulador Préstamos</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" href="./plazo.html">Calculadora Plazo Fijo</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" href="./glosario.html">Glosario</a>
+             </li>
+           </ul>
+         </div>
+       </div>
+     </nav>
+   </header>
 
-    <main>
+   <main>
 
 
-      <!--CUERPO-->
-      <form>
-        <label for="capitalP">Ingrese el capital inicial a depositar</label>
-        <input type="text" name="capitalP" id = "capitalP" placeholder="Ingrese la cantidad" required>
+     <!--CUERPO-->
+     <div class = "content"> 
+     <form>
+       <label for="capitalP">Ingrese el capital inicial a depositar</label>
+       <input type="text" name="capitalP" id = "capitalP" placeholder="Ingrese la cantidad" required>
 
-        <label for="interesP">Ingrese el interés a recibir</label>
-        <input type="text" name="interesP" id = "interesP" placeholder="Ingrese la cantidad" required>
+       <label for="interesP">Ingrese el interés a recibir</label>
+       <input type="text" name="interesP" id = "interesP" placeholder="Ingrese la cantidad" required>
 
-        <label for="tiempoP">Ingrese la cantidad de meses a depositar el capital</label>
-        <input type="text" name="tiempoP" id = "tiempoP" placeholder="Ingrese la cantidad" required>
+       <label for="tiempoP">Ingrese la cantidad de meses a depositar el capital</label>
+       <input type="text" name="tiempoP" id = "tiempoP" placeholder="Ingrese la cantidad" required>
+   
+
+       <input type = "button" class="btnplazo" id = "btnplazo" value = "Enviar"></button>
+
+     </form>
+    </div>
+   </main>
+
+
+
+   <!--FOOTER--> 
+   <footer>
+     <div class="footer-container">
+       <div class="footer-column">
+         <h3>About Us</h3>
+         <p>We are a company that specializes in creating responsive websites and applications.</p>
+       </div>
+       <div class="footer-column">
+         <h3>Contact Us</h3>
+         <ul>
+           <li>Email: info@company.com</li>
+           <li>Phone: 555-555-5555</li>
+           <li>Address: 123 Main St, Anytown USA</li>
+         </ul>
+       </div>
+       <div class="footer-column">
+         <h3>Follow Us</h3>
+         <ul>
+           <li><a href="#">Facebook</a></li>
+           <li><a href="#">Twitter</a></li>
+           <li><a href="#">Instagram</a></li>
+         </ul>
+       </div>
+     </div>
+   </footer>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+   </script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+   </script>
+   <!--Enlace JS-->
+   <!--script src="./js/main.js"></script>-->
+   <script src="../js/plazo.js"></script>
+
+
     
-
-        <input type = "button" class="btnplazo" id = "btnplazo" value = "Enviar"></button>
-
-      </form>
-
-    </main>
-
-
-
-    <!--FOOTER--> 
-    <footer>
-      <div class="footer-container">
-        <div class="footer-column">
-          <h3>About Us</h3>
-          <p>We are a company that specializes in creating responsive websites and applications.</p>
-        </div>
-        <div class="footer-column">
-          <h3>Contact Us</h3>
-          <ul>
-            <li>Email: info@company.com</li>
-            <li>Phone: 555-555-5555</li>
-            <li>Address: 123 Main St, Anytown USA</li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Follow Us</h3>
-          <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11">
-    </script>
-    <!--Enlace JS-->
-    <!--script src="./js/main.js"></script>-->
-    <script src="../js/plazo.js"></script>
 </body>
 
 

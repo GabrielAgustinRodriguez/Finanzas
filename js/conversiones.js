@@ -1,6 +1,11 @@
 
 //CONVERSIONES
 
+/*fetch("https://cryptoya.com/api/dolar")
+.then(response => response.json)
+.then(data => console.log(data))
+*/
+
 let pesosInput = document.getElementById("pesos")
 
 let moneda = document.getElementById("moneda")
@@ -13,8 +18,14 @@ let mensaje; //variable para mostrar el mensaje con la modena correcta
 
 
 function respuestaConversionesClick(){
-    Swal.fire("$" + pesosInput.value + " pesos son $" + parseInt(conversiones(pesosInput.value)) + " " + mensaje)
-    showConfirmButton: true
+    if(pesosInput.value <=0 || isNaN(pesosInput.value)){
+        Swal.fire("Por favor, introduzca un número positivo")    
+    }
+    else{
+        Swal.fire("$" + pesosInput.value + " pesos son $" + parseInt(conversiones(pesosInput.value)) + " " + mensaje)
+        showConfirmButton: true
+    }
+    
 }
 
 

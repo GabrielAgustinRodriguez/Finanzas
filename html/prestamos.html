@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Finanzas, Divisas, Dinero, Euros, Prestamos, Prestamo, Dolar, Peso, Sol, Yen, Rublo, Real, PesoMex">
-    <title>G&R Prestamos</title>
+    <title>G&R Plazo fijo</title>
     <link rel = "icon" type = "imagen/jpg" href = "./Iconos/icono.jpg">
 
     <!--Enlaces de bootstrap-->
@@ -13,7 +13,7 @@
      <!--Enlace de animaciones-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!--Enlace de estilos propios-->
-    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="../css/estilo.css">
     
    
 </head>
@@ -21,8 +21,8 @@
 <body>
     <header>
       
-      <!--NAV-->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+       <!--NAV-->
+       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="../index.html">Finanzas G&R</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,22 +53,24 @@
 
     <main>
 
-      <!--Carousel-->
-      
 
       <!--CUERPO-->
+      <div class = "content"> 
       <form>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" required>
-      
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Introduce tu email" required>
-      
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí"></textarea>
-      
-        <input type="submit" value="Enviar">
+        <label for="capitalS">Ingrese el capital solicitado</label>
+        <input type="text" name="capitalS" id = "capitalS" placeholder="Ingrese la cantidad" required>
+
+        <label for="interesS">Ingrese el interés a pagar</label>
+        <input type="text" name="interesS" id = "interesS" placeholder="Ingrese la cantidad" required>
+
+        <label for="tiempoS">Ingrese la cantidad de meses para pagar</label>
+        <input type="text" name="tiempoS" id = "tiempoS" placeholder="Ingrese la cantidad" required>
+    
+
+        <input type = "button" class="btnprestamo" id = "btnprestamo" value = "Enviar"></button>
+
       </form>
+      </div>
     </main>
 
 
@@ -98,12 +100,13 @@
         </div>
       </div>
     </footer>
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+    </script>
     <!--Enlace JS-->
-    <!--script src="./js/main.js"></script>
-    <!--<script src="./js/pruebas.js"></script>-->
+    <!--script src="./js/main.js"></script>-->
+    <script src="../js/prestamos.js"></script>
 </body>
 
 
