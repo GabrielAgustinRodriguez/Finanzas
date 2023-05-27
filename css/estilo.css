@@ -104,8 +104,7 @@ form {
     background-color: #45a049; /* Color de fondo al pasar el mouse */
   }
 
-  html,
-  body {
+  html, body {
     height: 100%;
     margin: 0;
   }
@@ -113,19 +112,14 @@ form {
   body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
   
   main {
     flex: 1;
   }
   
-  .content {
-    text-align: center;
-  }
-  
   footer {
-    flex-shrink: 0;
+    background-color: #333;
+    padding: 20px;
   }
   

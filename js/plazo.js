@@ -16,8 +16,14 @@ function respuestaPlazoClick(){
         title: "Plazo Fijo",
         text: "Si depositás $" + capitalInput.value + " durante " + tiempoInput.value + " meses, recibís un total de $" + calcularPlazoFijo(capitalInput.value, interesInput.value, tiempoInput.value),
     });
+    guardarFormulario();
 }
 
+function guardarFormulario(){
+    localStorage.setItem("capitalInicial", capitalInput.value)
+    localStorage.setItem("interes", interesInput.value)
+    localStorage.setItem("tiempo", tiempoInput.value)
+}
 
 function calcularPlazoFijo(capitalInicial, interes, dias){
     let interesCalculado = interes/12*dias;

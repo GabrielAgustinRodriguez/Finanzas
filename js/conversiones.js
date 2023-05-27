@@ -25,9 +25,14 @@ function respuestaConversionesClick(){
         Swal.fire("$" + pesosInput.value + " pesos son $" + parseInt(conversiones(pesosInput.value)) + " " + mensaje)
         showConfirmButton: true
     }
-    
+    guardarFormulario();
 }
 
+
+function guardarFormulario(){
+    localStorage.setItem("pesos", pesosInput.value)
+    localStorage.setItem("moneda", moneda.value)
+}
 
 
 function conversiones(dinero){
